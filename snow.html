@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Snow Fall CSS3 Background Animation</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+body{
+	background-color:black;
+	
+	/* Firefox */
+	background-image:
+		-moz-radial-gradient(circle, #FFFFFF, transparent 20px),
+		-moz-radial-gradient(circle, #FFFFFF, transparent 10px),
+		-moz-radial-gradient(circle, rgba(255,255,255,.9), transparent 20px),
+		-moz-radial-gradient(circle, rgba(255,255,255,.4), transparent 10px);
+	
+	/* Webkit */
+	background-image:
+		-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 20, from(white), to(transparent)),
+		-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 10, from(white), to(transparent)),
+		-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 20, from(rgba(255,255,255,.9)), to(transparent)),
+		-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 10, from(rgba(255,255,255,.4)), to(transparent));
+	
+	/* Background Attributes */
+	background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px; 
+	background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+	
+	/* Animation */
+	animation-name: movement;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	/* Firefox */
+	-moz-animation-name: movement;
+	-moz-animation-duration: 5s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+
+	/* Webkit */
+	-webkit-animation-name: movement;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+}
+@keyframes movement
+{
+	from {
+			background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+	}
+	to {
+			background-position: -550px 550px, -320px 410px, -120px 540px, -150px 350px;
+	}	
+}
+@-moz-keyframes movement
+{
+	from {
+			background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+	}
+	to {
+			background-position: -550px 550px, -320px 410px, -120px 540px, -150px 350px;
+	}	
+}
+@-webkit-keyframes movement
+{
+	from {
+			background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+	}
+	to {
+			background-position: -550px 550px, -320px 410px, -120px 540px, -150px 350px;
+	}	
+}
+</style>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<!-- Header -->
+<header>
+	<h1>Pure CSS3 Background Animation</h1>
+	<div id="backlinks">
+		<a href="http://www.inwebson.com/html5/html5-form-with-css3-markup/">BACK TO ARTICLE &raquo;</a>
+		<a href="http://www.inwebson.com">Visit inWebson.com &raquo;</a>
+	</div>
+	<div class="clearfix"></div>
+</header>
+
+<!-- Content -->
+<section id="wrapper">
+	<nav id="navigation">
+		<ul>
+			<li><a href="background.html" title="Static CSS3 background">Background</a></li>
+			<li><a href="starry.html" title="Starry night animation">Starry Night</a></li>
+			<li class="current"><a href="#" title="Snow fall animation">Snow Fall</a></li>
+		</ul>
+		<div class="clearfix"></div>	
+	</nav>
+	<div id="container">
+		<h2>Snow Fall CSS3 Background Animation</h2>
+		<div id="content">
+			<p>There is <strong>no JavaScript</strong> and <strong>no images</strong> are used in this page. The only thing that make this happen is due to the magic of <strong>CSS3 animation</strong>.</p>
+			<p>If you didn't see an animated background, means your current browser is not support CSS3 animation attributes, try using latest version of <strong>Chrome</strong> or <strong>Safari</strong> to view this page.</p>
+		</div>
+	</div>	
+</section>
+
+<!-- Footer -->
+<footer>
+	<span>&copy; 2011 <a href="http://www.inwebson.com">inWebson.com</a>. Design by <a href="http://www.inwebson.com/contactus">Kenny Ooi</a>. Powered by HTML5 and CSS3.</span>
+</footer>
+</body>
+</html>

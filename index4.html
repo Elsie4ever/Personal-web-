@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+<head>
+    <title>FPGA Project</title>
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<style>
+
+
+    h1 {
+        font-family:"Comic Sans MS";
+        color: black;
+        text-align: left;
+        border-spacing: 10px;
+    }
+
+    a {
+        font-family: 'Gill Sans', 'Rockwell Bold', monospace;
+        color: white;
+        font-size: 20px;
+    }
+
+    .mark{
+        background-color:#2F4F4F;
+        color:white;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+
+    }
+
+    .search_section{
+        text-align: right;
+    }
+
+    .home{
+
+    }
+
+    .nav{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #2F4F4F;
+        background-position: top;
+        opacity: 0.7;
+
+
+    }
+
+    .EV3{
+    }
+
+    li {
+        float: left;
+    }
+
+    li a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    li a:hover{
+        background-color: #708090;
+    }
+
+    .eTop{
+        transition:scale(0.5);
+        transition:transform .5s;
+    }
+
+    .eVer{
+        transition:scale(0.5);
+        transition:transform .5s;
+    }
+
+    .jMid{
+        transition:scale(0.5);
+        transition:transform .5s;
+    }
+    .bg-bubbles{
+        transition:scale(0.5);
+        transition:transform .5s;
+    }
+    .eMid{
+        transition:scale(0.5);
+        transition:transform .5s;
+    }
+
+
+    .jT{
+        transition:scale(0.5);
+        transition:transform .5s;
+    }
+
+    .eBot{
+        transition:scale(0.5);
+        transition:transform .5s;
+    }
+
+    .jBot{
+        transition:scale(0.5);
+        transition:transform .5s;
+    }
+    .search_button{
+
+    }
+    .logo{
+        z-index: 0;
+    }
+    svg:hover .eTop{
+        fill:#2F4F4F;
+        transform: scale(0.9);
+        transform: rotate(45deg);
+        transform-origin: 34.5px 83.5px;
+
+    }
+
+    svg:hover .eVer{
+        fill:#2F4F4F;
+        transform: scale(0.9);
+        transform: rotate(90deg);
+        transform-origin: 30px 60px;
+    }
+
+    svg:hover .jMid{
+        fill:#2F4F4F;
+        transform: rotate(90deg);
+        transform-origin: 70px 30px;
+    }
+
+    svg:hover .eMid{
+        fill:#2F4F4F;
+        transform: rotate(180deg);
+        transform-origin: 33px 33.75px;
+    }
+
+    svg:hover .jT{
+        fill:#2F4F4F;
+        transform: rotate(45deg);
+        transform-origin: 61px 20.5px;
+    }
+    hover .bg-bubbles{
+        fill:#2F4F4F;
+    }
+    svg:hover .eBot{
+        fill:#2F4F4F;
+        transform: rotate(-45deg);
+        transform-origin: 37px -19px;
+    }
+
+    svg:hover .jBot{
+        fill:#2F4F4F;
+        transform: rotate(-45deg);
+        transform-origin: 55px 25.5px;
+    }
+    .ev3 {
+        padding: 5px;
+        border: solid 1px #EFEFEF;
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        height:300px;
+        position: center;
+        border-radius: 8px;
+
+
+    }
+
+    .ev3:hover{
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        border: solid 1px #CCC;
+        -moz-box-shadow: 1px 1px 10px #999;
+        -webkit-box-shadow: 1px 1px 10px #999;
+        box-shadow: 1px 1px 10px #999;
+
+    }
+
+    .fpga  {
+        padding: 5px;
+        border: solid 1px #EFEFEF;
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        height:300px;
+        position: center;
+        border-radius:8px;
+
+    }
+
+    .fpga:hover{
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        border: solid 1px #CCC;
+        -moz-box-shadow: 1px 1px 10px #999;
+        -webkit-box-shadow: 1px 1px 10px #999;
+        box-shadow: 1px 1px 10px #999;
+    }
+
+</style>
+<body>
+
+
+<div class="container-fluid">
+
+
+    <p>
+        <br>
+        <svg class="logo animated flipInX" width="210" height="65" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+
+            <g>
+
+                <title>Layer 1</title>
+                <g stroke="null" id="svg_1">
+                    <rect class="eTop" stroke="#000000" opacity="0.5" fill="#708090" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="0" y="0" width="41.478201" height="7.380261" id="e_top"></rect>
+                    <rect class="eVer" stroke="#000000" opacity="0.75" fill="#F0FFFF" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="0" y="0" width="7.541491" height="65.286922" id="e_ver"/></rect>
+                    <rect class="eBot" stroke="#000000" opacity="0.5" fill="#708090" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="0" y="58" width="41.478201" height="7.380261" id="e_bot"/></rect>
+                    <rect class="eMid" stroke="#000000" opacity="0.75" fill="#2F4F4F" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="0" y="30" width="41.478201" height="7.380261" id="e_mid"/></rect>
+                    <rect class="jT" stroke="#000000" opacity="0.75" fill="#2F4F4F" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="50" y="0" width="45.922291" height="7.380261" id="j_top"></rect>
+                    <rect class="jBot" stroke="#000000" opacity="0.75" fill="#2F4F4F" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="35" y="58" width="43.094235" height="7.380261" id="j_bot"/></rect>
+                    <rect class="jMid" stroke="#000000" opacity="0.75" fill="#F0FFFF" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="70" y="0" width="7.541491" height="65.286922" id="e_ver"></rect>
+                </g>
+            </g>
+        </svg>
+    </p>
+
+
+
+
+
+
+    <ul  class="nav animated flipInX " style="font-size: 25px; text-decoration:none;">
+        <li class="active"><a href="index.html"  style="color: #FFF8DC;font-family: Arial Black, Gadget, sans-serif;">Home</a></li>
+        <li><a href="source/Elsie_ju.pdf"  style="color: #FFF8DC;font-family: Arial Black, Gadget, sans-serif; ">Resume</a></li>
+        <li><a href="index2.html"  style="color: #FFF8DC;font-family: Arial Black, Gadget, sans-serif; ">Portfolio</a></li>
+        <li><a href="https://github.com/Elsie4ever"  style="color: #FFF8DC;font-family: Arial Black, Gadget, sans-serif;">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/jiachen-ju-17088b133/" style="color: #FFF8DC;font-family: Arial Black, Gadget, sans-serif;">LinkedIn</a></li>
+        <li><a href="mailto:jiachen.ju@mail.mcgill.ca"  style="color: #FFF8DC;font-family: Arial Black, Gadget, sans-serif;">Email</a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="porjects" >
+        <div class="col-sm-8 col-md-8 col-lg-8 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-xs-10 col-xs-offset-1">
+            <h1 style="margin-bottom:10%; font-weight: 200; color: #2F4F4F;font-family: 'Gill Sans', 'Rockwell Bold', monospace;">FPGA Board Project</h1>
+            <h4 style=" font-weight: 200">Project:      <strong>Crazy Eights Card Game</strong></h4>
+            <h4 style=" font-weight: 200">Language:      <strong>VHDL</strong></h4>
+            <div class="row">
+                <div  class="col-xs-12">
+                    <br>
+                    <h4 style=" font-weight: 200"><strong>Introduction</strong></h4>
+                    <p>This will then be run and tested on the Altera board. In this considered card game, human player will play card with computer player. At first, a standard 52-card deck is used and each player gets seven arbitrary cards. The remaining cards pile is now called play pile, and then face up the top card in the play pile to start the discard pile. When it is the human player's turn or computer player's turn, the player must either play a valid card onto the discard pile or keep drawing a card from the card deck until the player picks up a card that can be played. Note that the valid cards can be played are:
+                        <p>1.Player can play any card or suit if the top card on the discard pile has face value of 8, and the card with face value 8 can also be played with any card or suit.</p>
+                        <p>2.If the top card on the discard pile is not 8, player can only play the card that matches the face value or suit of the top card.</p>
+                        <p>The players must get rid of all cards in hand in order to win the game.This integrated system includes the VHDL files for all  functional circuit modules from previous labs. After testing those circuit modules in Quartus II University Program VWF, the test for this entire system (card game) will be implemented on the Altera board.</p>
+
+                    </p>
+                    <h4 style=" font-weight: 200"><strong>Circuit Design</strong></h4>
+                    <p> The main components of the circuit are the finite state machines and stacks. The finite state machine controls the behaviour of the whole system and the stacks store the card informations for players. There is also a display mode selector circuit, it control the data shows in the 7 segment display respected to the display mode that chosen by user.</p>
+                    <img style=" text-align: center; rotation: 90deg" src="img/crazyEightTestbed.png" class="img-responsive">
+                    <h4 style=" font-weight: 200"><strong>Play on Altera Board</strong></h4>
+                    <p>1. The game has been initialized and the deck finished dealing seven cards for each player. Therefore, the card number in deck is 38. The top card on play pile is 32.
+                    </p>
+                    <img style=" text-align: center;" src="img/board1.JPG" class="img-responsive">
+                    <p>2. The card number in human player's hand is 7.
+                    </p>
+                    <img style=" text-align: center;" src="img/board2.JPG" class="img-responsive">
+                    <p>3. The card number in computer player's hand is 7.
+                    </p>
+                    <img style=" text-align: center;" src="img/board3.JPG" class="img-responsive">
+                    <p>4. Press the scroll down button to view the cards in human player's hand.
+                    </p>
+                    <img style=" text-align: center;" src="img/board4.JPG" class="img-responsive">
+                    <p>5. There is no legal card in the current human player's hand. Therefore, draw new cards from deck until the legal card is found. When drawing the card from deck, the valid LED is lighten up. When the human player stack receive the 10th card from deck, the card is found out to be legal(31).
+                    </p>
+                    <img style=" text-align: center;" src="img/board5.JPG" class="img-responsive">
+                    <p>6. Play the legal card on play pile, then the invalid LED is turned off and wait for computer player to play card.
+                    </p>
+                    <img style=" text-align: center;" src="img/board6.JPG" class="img-responsive">
+                    <p>7. The top card on play pile is changed from 31 to J1. Therefore,  the J1 is played out by computer player, which is right.
+                    </p>
+                    <img style=" text-align: center;" src="img/board7.JPG" class="img-responsive">
+                    <p>8. After several turns, the computer wins the game, The LED lights indicate “End of Game” and “Human Player Lose” are both lighted up.
+                    </p>
+                    <img style=" text-align: center;" src="img/board8.JPG" class="img-responsive">
+                    <p>9. After the computer player winning the game, check the card number in computer player stack. The number is 0, which is correct.
+                    </p>
+                    <img style=" text-align: center;" src="img/board9.JPG" class="img-responsive">
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>
